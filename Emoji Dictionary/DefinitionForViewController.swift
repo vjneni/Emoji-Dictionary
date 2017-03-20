@@ -19,10 +19,26 @@ class DefinitionForViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        self.view.backgroundColor = UIColor.black
+        emojiDefLabel.textColor = UIColor.white
+        
         emojiLabel.text = emoji
         
-        emojiDefLabel.text = "Hello"
-        
+        if emoji == "😇"{
+            emojiDefLabel.text = "Angels"
+        } else if emoji == "😎" {
+            emojiDefLabel.text = "Cool Bro!!!!"
+        } else if emoji == "😊"{
+            emojiDefLabel.text = "Smile Everyday"
+        } else if emoji == "🤓"{
+            emojiDefLabel.text = "Nerdy!!"
+        } else if emoji == "👍" {
+            emojiDefLabel.text = "Thumps UP"
+        } else if emoji == "🙏🏻" {
+            emojiDefLabel.text = "Namaste Guru"
+        } else if emoji == "💏" {
+            emojiDefLabel.text = "Love Yourself"
+        }
     }
 
     override func didReceiveMemoryWarning() {
