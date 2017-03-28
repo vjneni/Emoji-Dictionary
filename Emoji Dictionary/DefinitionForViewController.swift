@@ -13,33 +13,29 @@ class DefinitionForViewController: UIViewController {
     @IBOutlet weak var emojiLabel: UILabel!
     
     @IBOutlet weak var emojiDefLabel: UILabel!
-    var emoji = "No Emoji Now"
+    
+    //making it an object to accept th incomign Emoji object
+    
+    var emoji = Emoji()
 
+    @IBOutlet weak var categoryLabel: UILabel!
+    
+    @IBOutlet weak var birthYearLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        self.view.backgroundColor = UIColor.black
-        emojiDefLabel.textColor = UIColor.white
+        //self.view.backgroundColor = UIColor.black
+        //emojiDefLabel.textColor = UIColor.white
         
-        emojiLabel.text = emoji
+        emojiLabel.text = emoji.stringEmoji
+        emojiDefLabel.text = emoji.description
+        birthYearLabel.text = "BirthYear: \(emoji.birthYear)"
+        categoryLabel.text = "Category: \(emoji.category)"
         
-        if emoji == "😇"{
-            emojiDefLabel.text = "Angels"
-        } else if emoji == "😎" {
-            emojiDefLabel.text = "Cool Bro!!!!"
-        } else if emoji == "😊"{
-            emojiDefLabel.text = "Smile Everyday"
-        } else if emoji == "🤓"{
-            emojiDefLabel.text = "Nerdy!!"
-        } else if emoji == "👍" {
-            emojiDefLabel.text = "Thumps UP"
-        } else if emoji == "🙏🏻" {
-            emojiDefLabel.text = "Namaste Guru"
-        } else if emoji == "💏" {
-            emojiDefLabel.text = "Love Yourself"
         }
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

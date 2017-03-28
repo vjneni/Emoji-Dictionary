@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A0248761E899AD100A21B89 /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0248751E899AD100A21B89 /* Emoji.swift */; };
 		1A05ADA71E54CC2E00B5B8AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A05ADA61E54CC2E00B5B8AB /* AppDelegate.swift */; };
 		1A05ADA91E54CC2E00B5B8AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A05ADA81E54CC2E00B5B8AB /* ViewController.swift */; };
 		1A05ADAC1E54CC2E00B5B8AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A05ADAA1E54CC2E00B5B8AB /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A0248751E899AD100A21B89 /* Emoji.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
 		1A05ADA31E54CC2E00B5B8AB /* Emoji Dictionary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Emoji Dictionary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A05ADA61E54CC2E00B5B8AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A05ADA81E54CC2E00B5B8AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				1A05ADAD1E54CC2E00B5B8AB /* Assets.xcassets */,
 				1A05ADAF1E54CC2E00B5B8AB /* LaunchScreen.storyboard */,
 				1A05ADB21E54CC2E00B5B8AB /* Info.plist */,
+				1A0248751E899AD100A21B89 /* Emoji.swift */,
 			);
 			path = "Emoji Dictionary";
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			files = (
 				1A05ADA91E54CC2E00B5B8AB /* ViewController.swift in Sources */,
 				1A05ADA71E54CC2E00B5B8AB /* AppDelegate.swift in Sources */,
+				1A0248761E899AD100A21B89 /* Emoji.swift in Sources */,
 				1AD831FC1E79D368009D760C /* DefinitionForViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

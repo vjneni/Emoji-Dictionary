@@ -13,7 +13,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var tableview: UITableView!
     
     
-    var emojisArray = ["😇","😊","🤓","😎","🙏🏻","👍","💏"]
+    var emojisArray : [Emoji] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +21,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         tableview.dataSource = self
         tableview.delegate = self
+        emojisArray = makeEmojiArray()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -28,14 +29,21 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     }
     
+    
+    
+    
     // The below func is for Creating the tableView and adding an Array into TableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        print(indexPath.row)
         let emojicell = UITableViewCell()
-        emojicell.textLabel?.text = emojisArray[indexPath.row]
+        let emoji = emojisArray[indexPath.row]
+        emojicell.textLabel?.text = emoji.stringEmoji
         return emojicell
     }
+    
+    
+    
+    
     
     
     // The below func is to move from one viewcontroller to other its called segue (seg-way)
@@ -60,12 +68,59 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let destSEGVC = segue.destination as!
         DefinitionForViewController
         
-        destSEGVC.emoji = sender as! String
+        destSEGVC.emoji = sender as! Emoji
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func makeEmojiArray() -> [Emoji] {
+        let emoji1 = Emoji()
+        emoji1.birthYear = 1999
+        emoji1.stringEmoji = "😇"
+        emoji1.category = "Simley"
+        emoji1.description = "Angels Smile"
+        
+        let emoji2 = Emoji()
+        emoji2.birthYear = 1998
+        emoji2.stringEmoji = "😊"
+        emoji2.category = "Simley"
+        emoji2.description = "Always Smile"
+        
+        let emoji3 = Emoji()
+        emoji3.birthYear = 2000
+        emoji3.stringEmoji = "🤓"
+        emoji3.category = "Simley"
+        emoji3.description = "Nerdyy Smile!!"
+        
+        let emoji4 = Emoji()
+        emoji4.birthYear = 2001
+        emoji4.stringEmoji = "😎"
+        emoji4.category = "Simley"
+        emoji4.description = "Cool Bro!!"
+        
+        let emoji5 = Emoji()
+        emoji5.birthYear = 2010
+        emoji5.stringEmoji = "🙏🏻"
+        emoji5.category = "Hands"
+        emoji5.description = "Namste Guru"
+        
+        let emoji6 = Emoji()
+        emoji6.birthYear = 2009
+        emoji6.stringEmoji = "👍"
+        emoji6.category = "Thumb"
+        emoji6.description = "Thumbs UP!!"
+        
+        let emoji7 = Emoji()
+        emoji7.birthYear = 2008
+        emoji7.stringEmoji = "💏"
+        emoji7.category = "Love"
+        emoji7.description = "Lovely!!"
+        
+        return [emoji1, emoji2, emoji3, emoji4, emoji5, emoji6, emoji7]
+        
     }
 
 
